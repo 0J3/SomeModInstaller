@@ -1,0 +1,12 @@
+{
+	"name": "somemodinstaller",
+	"version": "0.1.0",
+	"description": "Some mod installer I made for aga",
+	"main": "js/index.js",
+	"author": "0J3#0001",
+	"license": "AGPL-3.0-or-later",
+	"bin": "./js/index.js",
+	"dependencies": {
+		"prompts": "^2.4.1"
+	}
+}
