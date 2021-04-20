@@ -6,11 +6,13 @@ import * as Path from 'path';
 const config = {
 	modsList:
 		'https://raw.githubusercontent.com/0J3/SomeModInstaller/main/mods.json',
+	defaultPath: process.env.APPDATA + '\\.minecraft\\mods',
 };
 (async () => {
-	const defaultPath = process.env.APPDATA + '\\.minecraft\\mods';
+	process.title = 'Mod Downloader by 0J3#0001';
+	const { defaultPath } = config;
 
-	const { useDefault, userpath } = await prompts([
+	const { userpath } = await prompts([
 		{
 			type: fs.existsSync(defaultPath) ? 'toggle' : null,
 			name: 'useDefault',
@@ -35,7 +37,7 @@ const config = {
 		throw new Error('Cannot find path');
 	}
 
-	const download = (url, path) => {
+	const download = (url: string, path: string) => {
 		return new Promise(async (resolve, reject) => {
 			try {
 				// path = target
@@ -68,10 +70,11 @@ const config = {
 	};
 
 	const downloadMod = (dat: { name: string; url: string }) => {
-		download(dat.url, Path.resolve(dat.name));
+		const rpath = Path.resolve(dlpath + dat.name);
+		console.log(`Downloader: Saving ${dat.name} to ${rpath}`);
+		download(dat.url, rpath);
 	};
 
-	const mods = JSON.parse(await axios.get(config.modsList));
-
+	const mods = (await axios.get(config.modsList)).data;
 	mods.forEach(downloadMod);
 })();
