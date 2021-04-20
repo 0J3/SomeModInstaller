@@ -1,7 +1,0 @@
-{
-	"compilerOptions": {
-		"rootDir": "./ts/",
-		"outDir": "./js/",
-		"moduleResolution": "node"
-	}
-}
