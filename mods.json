@@ -1,22 +1,27 @@
 [
 	{
-		"name": "ExtraOrigins.jar",
-		"url": "https://0j3.github.io/SomeModInstaller/extraorigins-1.16.5-11_1.jar"
-	},
-	{
 		"name": "FabricAPI.jar",
+		"displayName": "FabricAPI",
 		"url": "https://0j3.github.io/SomeModInstaller/fabric-api-0.33.01.16.jar"
 	},
 	{
+		"name": "Origins.jar",
+		"displayName": "Origins",
+		"url": "https://0j3.github.io/SomeModInstaller/Origins-1.16.5-0.7.0.jar"
+	},
+	{
+		"name": "ExtraOrigins.jar",
+		"displayName": "Extra Origins",
+		"url": "https://0j3.github.io/SomeModInstaller/extraorigins-1.16.5-11_1.jar"
+	},
+	{
 		"name": "MobOrigins.jar",
+		"displayName": "Mob Origins",
 		"url": "https://0j3.github.io/SomeModInstaller/moborigins-1.4.0.jar"
 	},
 	{
 		"name": "Pehkui.jar",
+		"displayName": "Pehkui",
 		"url": "https://0j3.github.io/SomeModInstaller/Pehkui-2.0.021w14a.jar"
-	},
-	{
-		"name": "Origins.jar",
-		"url": "https://0j3.github.io/SomeModInstaller/Origins-1.16.5-0.7.0.jar"
 	}
 ]
