@@ -76,5 +76,7 @@ const config = {
 	};
 
 	const mods = (await axios.get(config.modsList)).data;
+	console.log(mods);
+
 	mods.forEach(downloadMod);
 })();
