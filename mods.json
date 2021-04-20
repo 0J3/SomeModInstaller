@@ -1,0 +1,11 @@
+[
+	{
+		"name": "ExtraOrigins.jar",
+		"url": "https://raw.githubusercontent.com/0J3/SomeModInstaller/main/mods.json"
+	},
+	{
+		"name": "test2.jar",
+		"url": "https://raw.githubusercontent.com/0J3/SomeModInstaller/main/mods.json"
+	}
+]
+
