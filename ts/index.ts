@@ -4,8 +4,7 @@ import axios from 'axios';
 import * as Path from 'path';
 
 const config = {
-	modsList:
-		'https://raw.githubusercontent.com/0J3/SomeModInstaller/main/mods.json',
+	modsList: 'https://0j3.github.io/SomeModInstaller/mods.json',
 	defaultPath: process.env.APPDATA + '\\.minecraft\\mods',
 };
 (async () => {
@@ -71,7 +70,9 @@ const config = {
 
 	const downloadMod = (dat: { name: string; url: string }) => {
 		const rpath = Path.resolve(dlpath + dat.name);
-		console.log(`Downloader: Saving ${dat.name} to ${rpath}`);
+		console.log(
+			`Mod Downloader: Downloading and saving ${dat.name} to ${rpath} from source ${dat.url}`
+		);
 		download(dat.url, rpath);
 	};
 
